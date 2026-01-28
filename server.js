@@ -5,6 +5,9 @@ const { count, products } = JSON.parse(
   fs.readFileSync("./products.json", "utf-8"),
 );
 
+app.use(express.json());
+app.use(express.urlencoded());
+
 app.get("/products", (req, res) => {
   let result = products;
   if (req.query.category) {
@@ -23,6 +26,11 @@ app.get("/products", (req, res) => {
     );
   }
   res.json(result);
+});
+
+app.post("./products", (req, res) => {
+  let result = products;
+  result = JSON.parse(fs.writeFileSync('./products', 'utf-8')),
 });
 
 app.listen(9000, () => console.log("Server running on port 9000"));
