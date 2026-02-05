@@ -5005,7 +5005,15 @@
       "name": "Mouse Gamer Pro",
       "category": "Electronics",
       "subcategory": "Mouse",
-      "price": 59.99
+      "price": 59.99,
+      "id": 1501
+    },
+    {
+      "name": "Auriculares Pro Max V2",
+      "category": "Electronics",
+      "subcategory": "Headphones",
+      "price": 149.99,
+      "id": 1502
     }
   ]
 }
